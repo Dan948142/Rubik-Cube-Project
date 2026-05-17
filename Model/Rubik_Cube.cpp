@@ -44,7 +44,7 @@ string RubikCube::getMove(Move ind){
 }
 
 // Performing a Move, by calling relevant function
-RubikCube &RubikCube::invert(Move ind){
+RubikCube &RubikCube::move(Move ind){
     switch(ind){
         case Move::L: return this->l();
         case Move::L2: return this->l2();
@@ -65,6 +65,31 @@ RubikCube &RubikCube::invert(Move ind){
         case Move::B2: return this->b2();
         case Move::BPRIME: return this->bPrime();
     }
+    return *this;
+}
+
+RubikCube &RubikCube::invert(Move ind){
+    switch(ind){
+        case Move::L: return this->lPrime();
+        case Move::L2: return this->l2();
+        case Move::LPRIME: return this->l();
+        case Move::R: return this->rPrime();
+        case Move::R2: return this->r2();
+        case Move::RPRIME: return this->r();
+        case Move::U: return this->uPrime();
+        case Move::U2: return this->u2();
+        case Move::UPRIME: return this->u();
+        case Move::D: return this->dPrime();
+        case Move::D2: return this->d2();
+        case Move::DPRIME: return this->d();
+        case Move::F: return this->fPrime();
+        case Move::F2: return this->f2();
+        case Move::FPRIME: return this->f();
+        case Move::B: return this-bPrime();
+        case Move::B2: return this->b2();
+        case Move::BPRIME: return this->b();
+    }
+    return *this;
 }
 
 // Printing te Cube
