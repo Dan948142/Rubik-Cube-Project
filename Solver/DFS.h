@@ -19,7 +19,7 @@ private:
         for(int i=0;i<18;i++){
             cube.move(RubikCube::Move(i));
             moves.push_back(RubikCube::Move(i));
-            dfs(dep+1);
+            if(dfs(dep+1)) return true; 
             cube.invert(RubikCube::Move(i));
             moves.pop_back();
         }
