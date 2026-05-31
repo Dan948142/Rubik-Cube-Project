@@ -207,7 +207,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Author
 
-**Dan948142**  
+**Sanskar Sovitkar**  
 GitHub: [@Dan948142](https://github.com/Dan948142)
 
 ---
