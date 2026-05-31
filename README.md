@@ -1,6 +1,6 @@
 # Rubik's Cube Solver
 
-A C++ implementation of a 3x3 Rubik's Cube solver using advanced algorithms to find optimal or near-optimal solutions.
+A C++ implementation of a 3x3 Rubik's Cube solver using advanced algorithms to find optimal solutions.
 
 ---
 
@@ -42,15 +42,21 @@ This project implements a complete 3x3 Rubik's Cube solver in C++. It provides f
 ```
 Rubik-Cube-Project/
 ├── README.md
-├── src/
-│   ├── cube.cpp          # Core cube implementation
-│   ├── cube.h            # Cube class definition
-│   ├── solver.cpp        # Solving algorithms
-│   ├── solver.h          # Solver interface
-│   └── main.cpp          # Entry point and demo
-├── include/
-│   └── constants.h       # Definitions and constants
-├── Makefile              # Build configuration
+├── main.cpp
+├── CMakeLists.txt
+├── .gitignore
+├── Solver/
+│   ├── BFS.h             # BFS Solver 
+│   ├── DFS.h             # DFS Solver
+│   ├── IDDFS.h           # IDDFS Solver
+│   └── IDASTAR.h         # IDASTAR Solver
+├── Model/
+│   ├── BitBoard_Representation.cpp
+│   ├── Cube_3D_Representation.cpp
+│   ├── Rubik_Cube.cpp
+│   ├── Rubik.h
+│   └── Cube_1D_Representation.cpp
+├── PatternDatabase/
 └── LICENSE
 ```
 
@@ -208,14 +214,8 @@ GitHub: [@Dan948142](https://github.com/Dan948142)
 
 ## Acknowledgments
 
-- Herbert Kociemba's cube algorithm research
+- Korf's cube algorithm research
 - The cubing community for insights into solving techniques
 - Open-source contributors and reviewers
 
 ---
-
-## References
-
-- [Rubik's Cube on Wikipedia](https://en.wikipedia.org/wiki/Rubik%27s_Cube)
-- [Kociemba's Algorithm](https://www.jaapsch.net/puzzles/compcube.htm)
-- [Cube Move Notation](https://ruwix.com/the-rubiks-cube/notation/)
