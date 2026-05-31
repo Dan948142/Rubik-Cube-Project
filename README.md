@@ -15,7 +15,6 @@ A C++ implementation of a 3x3 Rubik's Cube solver using advanced algorithms to f
 - [Algorithm](#algorithm)
 - [Examples](#examples)
 - [Performance](#performance)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -182,20 +181,6 @@ Solution:   52 moves (near-optimal)
 | Maximum Moves (Theoretical) | 20 |
 | Space Complexity | O(1) |
 | Time per Move Generation | ~5µs |
-
----
-
-## Contributing
-
-Contributions are welcome! Areas for improvement include:
-
-- [ ] Implement IDA* for guaranteed optimal solutions
-- [ ] Add visualization/GUI interface
-- [ ] Create Python bindings
-- [ ] Optimize lookup tables with caching
-- [ ] Add unit tests
-
-Please fork the repository and submit a pull request with your improvements.
 
 ---
 
