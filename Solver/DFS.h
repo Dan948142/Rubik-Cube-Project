@@ -11,10 +11,17 @@ class DFSSolver{
 private:
     vector<RubikCube::Move> moves;
     int max_search_depth;
+    unordered_map<T, int, H> visited; 
 
     bool dfs(int dep){
         if(cube.isSolved()) return true;
         if(dep > max_search_depth) return false;
+
+        if(visited.count(cube) && visited[cube] <= dep){
+            return false; 
+        }
+
+        visited[cube] = dep;
 
         for(int i=0;i<18;i++){
             cube.move(RubikCube::Move(i));
@@ -29,7 +36,7 @@ private:
 public:
     T cube;
 
-    DFSSolver(T c, int d){
+    DFSSolver(T c, int d = 15){
         moves.clear();
         cube = c;
         max_search_depth = d;
