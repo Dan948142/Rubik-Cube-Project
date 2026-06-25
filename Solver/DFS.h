@@ -43,6 +43,7 @@ public:
     }
 
     vector<RubikCube::Move> solve(){
+        visited.clear();
         dfs(1);
         return moves;
     }
