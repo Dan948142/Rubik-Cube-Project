@@ -41,7 +41,7 @@ private:
     pair<T, int> IDAStar(int bound){
         priority_queue<pair<Node, int>, vector<pair<Node,int>>, compareCube> pq;
 
-        Node start = Node(cuve, 0, cornerDB.getNumMoves(cube));
+        Node start = Node(cube, 0, cornerDB.getNumMoves(cube));
         pq.push({start, 0});
 
         int next_bound = 100;
@@ -88,7 +88,7 @@ public:
 
     vector<RubikCube::Move> solve(){
         int bound = 1;
-        auto p IDAStar(bound);
+        auto p = IDAStar(bound);
 
         while(p.second != bound){
             resetStructure();
